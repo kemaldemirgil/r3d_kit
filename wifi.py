@@ -1,5 +1,25 @@
 import subprocess
 import re
+from colorama import init
+from colorama import Fore, Style
+init()
+
+print(f"{Fore.RED}" + 
+    """                                             
+    @@@@@@@   @@@@@@@@  @@@@@@@      @@@  @@@  @@@  @@@@@@@  
+    @gam3@@@  @@fac3@@  @@@@@@@@     @@@  @@@  @@@  @@@@@@@  
+    @@!  @@@  @@!       @@!  @@@     @@!  !@@  @@!    @@!    
+    !@!  @!@  !@!       !@!  @!@     !@!  @!!  !@!    !@!    
+    @!@!!@!   @!!!:!    @!@  !@!     @!@@!@!   !!@    @!!    
+    !!@!@!    !!!!!:    !@!  !!!     !!@!!!    !!!    !!!    
+    !!: :!!   !!:       !!:  !!!     !!: :!!   !!:    !!:    
+    :!:  !:!  :!:       :!:  !:!     :!:  !:!  :!:    :!:    
+    ::   :::   :: ::::   :::: ::      ::  :::   ::     ::    
+    :   : :  : :: ::   :: :  :       :   :::  :       :                                                            
+    """
+    + f"{Style.RESET_ALL}"
+)
+print("\033[1;32;40m")
 
 command_output = subprocess.run(
     ["netsh", "wlan", "show", "profiles"], capture_output=True
